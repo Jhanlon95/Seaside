@@ -32,7 +32,7 @@
                                 <TextBlock Grid.Row="0" Text="{DynamicResource LOCAllGames}"
                                        FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
                                        Foreground="{DynamicResource TextBrushDarker}"
-                                       Margin="7,-7,0,10" Style="{StaticResource BaseTextBlockStyle}"/>
+                                       Margin="7,12,0,12" Style="{StaticResource BaseTextBlockStyle}"/>
                                 <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
                                          BorderBrush="Transparent"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
@@ -50,7 +50,7 @@
                                         </DataTemplate>
                                     </ExtendedListBox.ItemTemplate>
                                 </ExtendedListBox>
-                                <TextBlock FontSize="{StaticResource FontSizeLarge}" Margin="0,35,0,0"
+                                <TextBlock FontSize="{StaticResource FontSizeLarge}" Margin="0,0,0,0"
                                        Text="{DynamicResource LOCNoItemsFound}" TextWrapping="Wrap"                                       
                                        TextAlignment="Center" HorizontalAlignment="Center">
                                     <TextBlock.Style>

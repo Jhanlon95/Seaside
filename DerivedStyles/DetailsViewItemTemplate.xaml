@@ -71,104 +71,103 @@
                                     </DockPanel>
                                 </DockPanel>
 
-                                <DockPanel DockPanel.Dock="Left" Margin="0,13,0,3" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                <StackPanel  Margin="0,13,15,3" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
 
+                                    <Grid Margin="0">
                                         <Grid Margin="0">
-                                            <Grid Margin="0">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <DockPanel DockPanel.Dock="Left" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">
                                                 <Label Content="" FontFamily="{StaticResource FontIcoFont}" FontSize="12" VerticalAlignment="Center"
-												Foreground="{DynamicResource TextBrush}" Background="Transparent" Grid.Column="0"/>
+												Foreground="{DynamicResource TextBrush}" Background="Transparent"/>
+                                                <TextBlock ToolTip="{DynamicResource LOCLastPlayed}"
+												    Text="{Binding Path=LastActivity, Converter={StaticResource DateTimeToLastPlayedConverter}}"
+												    TextBlock.Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center" 
+												    FontSize="11" Margin="0,0,10,0"/>
+                                                <TextBlock Text="{Binding Playtime, Converter={StaticResource PlayTimeToStringConverter}}"
+												    ToolTip="{DynamicResource LOCTimePlayed}" VerticalAlignment="Center" 
+												    TextBlock.Foreground="{DynamicResource TextBrush}" FontSize="11" />
+                                            </DockPanel>
 
-                                                <TextBlock Grid.Column="1" ToolTip="{DynamicResource LOCLastPlayed}"
-												Text="{Binding Path=LastActivity, Converter={StaticResource DateTimeToLastPlayedConverter}}"
-												TextBlock.Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center" Margin="5,0,8,0"
-												FontSize="11"/>
-                                                <TextBlock Grid.Column="2" Text="{Binding Playtime, Converter={StaticResource PlayTimeToStringConverter}}"
-												ToolTip="{DynamicResource LOCTimePlayed}" VerticalAlignment="Center" 
-												TextBlock.Foreground="{DynamicResource TextBrush}" FontSize="11" Margin="8,0,10,0"/>
+                                            <DockPanel DockPanel.Dock="Right" Grid.Column="1" ToolTip="{DynamicResource LOCUserScore}" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                <DockPanel Visibility="{Binding UserScore, Converter={StaticResource NullToVisibilityConverter}}" >
+                                                    <Label Content="&#xF000;" FontSize="13" VerticalAlignment="Top" FontFamily="{StaticResource FontIcoFont}" Margin="3,0,0,0"/>
+                                                <TextBlock Text="{Binding UserScore}" FontSize="11" FontFamily="{StaticResource FontIcoFont}">
+                                                    <TextBlock.Style>
+                                                        <Style TargetType="TextBlock">
+                                                            <Setter Property="Foreground" Value="{DynamicResource LessEighty}" />
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="5">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="10">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="15">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="20">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="25">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="30">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="35">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="40">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="45">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="50">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="55">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="60">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="65">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="70">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="75">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="80">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="85">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="90">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="95">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding UserScore}" Value="100">
+                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBlock.Style>
+                                                </TextBlock>
+                                                    <TextBlock Text="/100" FontSize="11" FontFamily="{StaticResource FontIcoFont}" HorizontalAlignment="Center"/>
+                                                </DockPanel>
+                                                <DockPanel>
 
-                                                <StackPanel Grid.Column="3" Visibility="{Binding UserScore, Converter={StaticResource NullToVisibilityConverter}}" ToolTip="{DynamicResource LOCUserScore}" VerticalAlignment="Center" Orientation="Horizontal">
-                                                    <Label Content="&#xF000;" FontSize="13" Margin="6,0,0,3" VerticalAlignment="Center" FontFamily="{StaticResource FontIcoFont}"/>
-                                                    <TextBlock Text="{Binding UserScore}" Margin="2,3,0,0" FontSize="11" FontFamily="{StaticResource FontIcoFont}">
-                                                        <TextBlock.Style>
-                                                            <Style TargetType="TextBlock">
-                                                                <Setter Property="Foreground" Value="{DynamicResource LessEighty}" />
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="5">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="10">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="15">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="20">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="25">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="30">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="35">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="40">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="45">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="50">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="55">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="60">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="65">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="70">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="75">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="80">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="85">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="90">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="95">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                    <DataTrigger Binding="{Binding UserScore}" Value="100">
-                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                            </Style>
-                                                        </TextBlock.Style>
-                                                    </TextBlock>
-                                                    <TextBlock Text="/100" FontSize="11" Margin="0,3,10,0" FontFamily="{StaticResource FontIcoFont}"/>
-                                                </StackPanel>
-
-                                                <TextBlock Grid.Column="4" VerticalAlignment="Center"  HorizontalAlignment="Right"
-													FontFamily="{StaticResource FontIcoFont}" Margin="10,0,8,0">
+                                                    <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="20,0,0,0">
                                                     <TextBlock.Style>
                                                         <Style TargetType="TextBlock">
                                                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
@@ -224,10 +223,15 @@
                                                         </Style>
                                                     </TextBlock.Style>
                                                 </TextBlock>
-                                            </Grid>
+                                                </DockPanel>
+                                            </DockPanel>
+
+
                                         </Grid>
-                                    </DockPanel>
+                                    </Grid>
+                                </StackPanel>
                             </StackPanel>
+
                         </DockPanel>
                     </Border>
                     <ControlTemplate.Triggers>
