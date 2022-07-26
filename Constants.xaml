@@ -1,0 +1,381 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <!--Theme settings region start-->
+    <sys:Double x:Key="LibraryGameBackgroundBlendValue">1.0</sys:Double>
+    <sys:Boolean x:Key="LibraryGameBackgroundBlendWithBackground">True</sys:Boolean>
+    <sys:Boolean x:Key="LibraryGameBackgroundAnimateTransition">False</sys:Boolean>
+    <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
+    <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
+    <Visibility x:Key="DetailsViewDetailsIconsVisibility">Visible</Visibility>
+    <Visibility x:Key="GridViewDetailsIconsVisibility">Visible</Visibility>
+    <Visibility x:Key="GridViewCoverSubtitleVisibility">Visible</Visibility>
+    <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
+    <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
+    <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
+    <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverUseRoundedCorners">True</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
+    <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
+    <!--region end-->
+
+    <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>
+    <Thickness x:Key="PanelTopPanelSeparator"
+               Left="0"
+               Top="{StaticResource PanelTopPanelSeparatorHeight}"
+               Right="0"
+               Bottom="0" />
+    
+    <sys:Double x:Key="FontSizeSmall">12</sys:Double>
+    <sys:Double x:Key="FontSize">14</sys:Double>
+    <sys:Double x:Key="FontSizeLarge">15</sys:Double>
+    <sys:Double x:Key="FontSizeLarger">20</sys:Double>
+    <sys:Double x:Key="FontSizeLargest">29</sys:Double>
+    <FontFamily x:Key="FontFamily">Trebuchet MS</FontFamily>
+    <FontFamily x:Key="MonospaceFontFamily">Consolas</FontFamily>
+    <Thickness x:Key="PopupBorderThickness">1</Thickness>
+    <Thickness x:Key="ControlBorderThickness">1</Thickness>
+    <sys:Double x:Key="EllipseBorderThickness">1</sys:Double>
+    <CornerRadius x:Key="ControlCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadiusViewPlayButtons">5</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadiusSmall">0</CornerRadius>
+    <CornerRadius x:Key="MainMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GeneralMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="TrayMenuCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="TooltipCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverCornerRadius">5</CornerRadius>
+    <CornerRadius x:Key="GridViewCoverGridBackgroundDisabledCornerRadius">5,5,0,0</CornerRadius>
+    <CornerRadius x:Key="GridViewShowGameNameCornerRadius">0,0,5,5</CornerRadius>
+    <CornerRadius x:Key="GridViewSelectionBorderCornerRadius">7</CornerRadius>
+    <CornerRadius x:Key="DetailsViewCoverCornerRadius">5</CornerRadius>
+    <Thickness x:Key="SidebarItemPadding">8</Thickness>
+
+    <Color x:Key="BlackColor">#FF000000</Color>
+    <Color x:Key="WhiteColor">#FFFFFFFF</Color>
+    <Color x:Key="TextColor">#f2f2f2</Color>
+    <Color x:Key="TextColorDarker">#FF999999</Color>
+    <Color x:Key="TextColorDark">#FF41ADF1</Color>
+    <Color x:Key="MainColor">#262c38</Color>
+    <Color x:Key="MainColorDark">#FF4A5570</Color>
+    <Color x:Key="HoverColor">#FF373538</Color>
+    <Color x:Key="GlyphColor">#FF2A7DCD</Color>
+    <Color x:Key="GlyphColorSecondary">#2f3543</Color>
+    <Color x:Key="DataChangeNotifColor">#ffa500</Color>
+    <!---->
+    <Color x:Key="HighlightGlyphColor">#FF373538</Color>
+    <Color x:Key="PopupBackgroundColor">#FF302E32</Color>
+    <Color x:Key="PopupBorderColor">#373538</Color>
+    <Color x:Key="BackgroundToneColor">#262c38</Color>
+    <Color x:Key="GridItemBackgroundColor">Transparent</Color>
+    <Color x:Key="PanelSeparatorColor">#373538</Color>
+    <Color x:Key="WindowPanelSeparatorColor">Transparent</Color>
+
+    <Color x:Key="NormalBorderControlsColor">#6f6d70</Color>
+    <Color x:Key="NormalBorderControlsHoverColor">#acabad</Color>
+    <Color x:Key="NormalBorderControlsHoverTransparencyColor">#4c919191</Color>
+    <Color x:Key="DetailsViewGrouCountBackgroundColor">#CC595959</Color>
+
+    <Color x:Key="PurpleButtonBrushColor">#FF2A7DCD</Color>
+    <Color x:Key="PurpleButtonBrushHighlightColor">#FF41ADF1</Color>
+    <Color x:Key="PurpleButtonBrushSelectedColor">#41b2fa</Color>
+
+    <Color x:Key="ToggleButtonNotCheckedColor">#2e2c2f</Color>
+    <Color x:Key="ToggleButtonNotCheckedBorderColor">#6f6d70</Color>
+    <Color x:Key="ToggleButtonNotCheckedHighlightBorderColor">#acabad</Color>
+
+    <Color x:Key="ThumbFillColor">#6f7275</Color>
+    <Color x:Key="ThumbFillHoverColor">#8f9495</Color>
+
+    <Color x:Key="TextBoxBorderColor">#6f6d70</Color>
+    <Color x:Key="TextBoxBorderHoverColor">#acabad</Color>
+
+    <Color x:Key="TitleButtonsBorderBackgroundColor">#2e2c2f</Color>
+
+    <Color x:Key="StandardWindowTitleBackgroundColor">#373538</Color>
+    <Color x:Key="StandardWindowBackgroundColor">#302e32</Color>
+
+    <Color x:Key="TitleWindowStateHoverColor">#424242</Color>
+    <Color x:Key="TitleWindowCloseHoverColor">#d22e00</Color>
+    <Color x:Key="ControlsBackgroundColor">#FF2E2C2F</Color>
+
+    <Color x:Key="TopPanelItemBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelSearchBoxBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelFilterToggleBackgroundColor">#d9000000</Color>
+
+    <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelSearchBoxBackgroundBrush" Color="{DynamicResource TopPanelSearchBoxBackgroundColor}" />
+    <SolidColorBrush x:Key="TopPanelFilterToggleBackgroundBrush" Color="{DynamicResource TopPanelFilterToggleBackgroundColor}" />
+    <SolidColorBrush x:Key="DataChangeNotifBrush" Color="{DynamicResource DataChangeNotifColor}" />
+    
+    <SolidColorBrush x:Key="GridViewItemMaskBackgroundBrush" Color="#2e2c2e" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#2e2c2f" />
+    <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
+    <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
+    <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
+    <SolidColorBrush x:Key="NormalBrush" Color="{DynamicResource HoverColor}" />
+    <SolidColorBrush x:Key="NormalBrushDark" Color="{DynamicResource MainColorDark}" />
+    <SolidColorBrush x:Key="NormalBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="HoverBrush" Color="{DynamicResource HighlightGlyphColor}" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="HighlightGlyphBrush" Color="{DynamicResource HighlightGlyphColor}" />
+    <SolidColorBrush x:Key="PopupBorderBrush" Color="{DynamicResource PopupBorderColor}" />
+    <SolidColorBrush x:Key="TooltipBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#FF2E2C2F" />
+    <SolidColorBrush x:Key="GridItemBackgroundBrush" Color="{DynamicResource GridItemBackgroundColor}" />
+    <SolidColorBrush x:Key="PanelSeparatorBrush" Color="{DynamicResource PanelSeparatorColor}" />
+    <SolidColorBrush x:Key="WindowPanelSeparatorBrush" Color="{DynamicResource WindowPanelSeparatorColor}" />
+    <SolidColorBrush x:Key="PopupBackgroundBrush" Color="{DynamicResource PopupBackgroundColor}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource GlyphColorSecondary}" />
+    <SolidColorBrush x:Key="MainPanelBackgroundBrush" Color="{DynamicResource MainColor}" />
+    <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource ControlBackgroundColorDark}" />
+
+    <SolidColorBrush x:Key="NormalBorderBrushControls" Color="{DynamicResource NormalBorderControlsColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHover" Color="{DynamicResource NormalBorderControlsHoverColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsSelected" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="NormalBorderBrushControlsSelectedWhite" Color="{DynamicResource TextColor}" />
+
+    <SolidColorBrush x:Key="NormalBorderBrushControlsHoverTransparency" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" Opacity="0.4"/>
+
+    <SolidColorBrush x:Key="DetailsViewGameListBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DetailsViewGrouCountBackgroundBrush" Color="{DynamicResource DetailsViewGrouCountBackgroundColor}" />
+    <SolidColorBrush x:Key="DetailsViewGroupCountTextBrush" Color="#CC000000" />
+    
+    <SolidColorBrush x:Key="PurpleButtonBrush" Color="{DynamicResource PurpleButtonBrushColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushHighlight" Color="{DynamicResource PurpleButtonBrushHighlightColor}" />
+    <SolidColorBrush x:Key="PurpleButtonBrushSelected" Color="{DynamicResource PurpleButtonBrushSelectedColor}" />
+
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBrush" Color="{DynamicResource ToggleButtonNotCheckedColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedBorderColor}" />
+    <SolidColorBrush x:Key="ToggleButtonNotCheckedHighlightBorderBrush" Color="{DynamicResource ToggleButtonNotCheckedHighlightBorderColor}" />
+
+    <SolidColorBrush x:Key="ThumbFillBrush" Color="{DynamicResource ThumbFillColor}" />
+    <SolidColorBrush x:Key="ThumbFillBrushHover" Color="{DynamicResource ThumbFillHoverColor}" />
+
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource TextBoxBorderColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushHover" Color="{DynamicResource TextBoxBorderHoverColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBrushSelected" Color="{DynamicResource GlyphColor}" />
+
+    <SolidColorBrush x:Key="TitleButtonsBorderBackground" Color="{DynamicResource TitleButtonsBorderBackgroundColor}" />
+
+    <SolidColorBrush x:Key="DetailsViewWrapBackgroundsBrush" Color="Transparent" />
+
+    <SolidColorBrush x:Key="StandardWindowTitleBackgroundBrush" Color="{DynamicResource StandardWindowTitleBackgroundColor}" />
+    <SolidColorBrush x:Key="StandardWindowBackgroundBrush" Color="{DynamicResource StandardWindowBackgroundColor}" />
+
+    <SolidColorBrush x:Key="TitleWindowStateHover" Color="{DynamicResource TitleWindowStateHoverColor}" />
+    <SolidColorBrush x:Key="TitleWindowCloseHover" Color="{DynamicResource TitleWindowCloseHoverColor}" />
+
+    <SolidColorBrush x:Key="OpaqueHighlightBrush" Color="{DynamicResource GlyphColor}" Opacity="0.5"/>
+    <SolidColorBrush x:Key="OpaqueHighlightBrushBright" Color="{DynamicResource PurpleButtonBrushHighlightColor}" Opacity="0.5"/>
+    <SolidColorBrush x:Key="OpaqueGrayHighlightBrush" Color="{DynamicResource NormalBorderControlsHoverTransparencyColor}" />
+
+    <SolidColorBrush x:Key="PositiveRatingBrush" Color="#FF78FFA0" />
+    <SolidColorBrush x:Key="NegativeRatingBrush" Color="#FFC85429" />
+    <SolidColorBrush x:Key="MixedRatingBrush" Color="#FFFFFCA1" />
+
+    <SolidColorBrush x:Key="WarningBrush" Color="#FFC85429" />
+
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="{DynamicResource ControlsBackgroundColor}" />
+    <SolidColorBrush x:Key="SidebarMarginBrush" Color="Transparent" />
+
+    <LinearGradientBrush x:Key="ExpanderBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
+        <GradientStop Color="#FF2A7DCD" Offset="0"/>
+        <GradientStop Color="#2C3A67" Offset="0.7"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ExpanderExBackgroundBrush" StartPoint="-0.1,0.5" EndPoint="1.2,1" >
+        <GradientStop Color="#F21d1412" Offset="0"/>
+        <GradientStop Color="#002C3A67" Offset="0.7"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="WindowBackgourndBrush" Color="#302e32" />
+    
+    <LinearGradientBrush x:Key="DetailsViewFadeBorder" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#0DA8A8A8" Offset="0.0" />
+        <GradientStop Color="#0DA8A8A8" Offset="0.3" />
+        <GradientStop Color="#00A8A8A8" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="CoversButtonsBrush" StartPoint="0.5,0.5" EndPoint="0.5,1">
+        <GradientStop Color="#00000000" Offset="0.0" />
+        <GradientStop Color="#D9000000" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TopPanelFadeBackgroundBrush" StartPoint="0.5,0.0" EndPoint="0.5,1">
+        <GradientStop Color="#0Db0b0b0" Offset="0.4" />
+        <GradientStop Color="#00b0b0b0" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="PanelsDarkenBrush" Color="#261a1a1a" />
+    <SolidColorBrush x:Key="DetailsViewImageDarkenBrush" Color="#21000000" />
+    <SolidColorBrush x:Key="DetailsViewPanelsBackgroundBrush" Color="#3374777d" />
+    <SolidColorBrush x:Key="DetailsViewDetailsLabelForegroundBrush" Color="#73f8f8f8" />
+    <SolidColorBrush x:Key="DetailsViewSeparatorBrush" Color="#4Dc2c2c2" />
+    <LinearGradientBrush x:Key="DetailsViewFadePanelBackgroundBrush" StartPoint="0.5,0.0" EndPoint="0.5,1">
+        <GradientStop Color="#AD414244" Offset="0.4" />
+        <GradientStop Color="#00414244" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="SidebarItemForegroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
+        <GradientStop Color="#FF2A7DCD" Offset="0.3" />
+        <GradientStop Color="#FF41ADF1" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DetailsIconsBackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
+        <GradientStop Color="#FF2A7DCD" Offset="0.3" />
+        <GradientStop Color="#FF41ADF1" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DetailsIcons2BackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
+        <GradientStop Color="#009377" Offset="0.4" />
+        <GradientStop Color="#00d492" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DetailsIcons3BackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
+        <GradientStop Color="#f27302" Offset="0.4" />
+        <GradientStop Color="#f0a300" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#00d492" />
+    <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
+
+    <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="GridViewCoverSubtitleBrush" Color="#b7b7b7" />
+    <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
+    
+    <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
+        <GradientStop Color="{DynamicResource TextColorDarker}" Offset="0.4" />
+        <GradientStop Color="#00cb16db" Offset="0.95" />
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
+        <GradientStop Color="{DynamicResource TextColorDarker}" Offset="0.4" />
+        <GradientStop Color="#00cb16db" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
+    <ImageBrush x:Key="DarkNoiseBrush" ImageSource="{ThemeFile 'Images/dark_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="1" popt:Freeze="True"/>
+    <ImageBrush x:Key="WhiteNoiseBrush" ImageSource="{ThemeFile 'Images/white_noise.png'}" TileMode="Tile" Viewport="0,0,100,100" ViewportUnits="Absolute"
+                    Opacity="1.0" popt:Freeze="True"/>
+    <BitmapImage x:Key="InnerGlowBitmap" UriSource="{ThemeFile 'Images/innerglow.png'}" popt:Freeze="True" CacheOption="OnLoad" />
+    
+    <LinearGradientBrush x:Key="ExplorerPanelBackgroundBrush" StartPoint="1.0,0.3" EndPoint="0.0,0.6">
+        <GradientStop Color="#73000000" Offset="0.2" />
+        <GradientStop Color="#8C000000" Offset="0.55" />
+        <GradientStop Color="#80000000" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <sys:Int32 x:Key="BannersBitmapDecodeWidth">300</sys:Int32>
+    <sys:Int32 x:Key="BannersBitmapDecodeHeight">50</sys:Int32>
+    
+    <!--Platform SpecId Banners-->
+    <BitmapImage x:Key="NintendoGamecubePlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_gamecube.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoSuperNesPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_super_nes.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoGameboyAdvancePlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_gameboyadvance.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoGameboyColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_gameboycolor.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoNesPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_nes.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoWiiPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_wii.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Nintendo64PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_64.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaGenesisPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_genesis.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaysationPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="XboxOnePlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox_one.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Xbox360PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox360.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaystation2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation2.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPspPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_psp.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaCdPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_cd.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Nintendo3dsPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_3ds.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoSwitchPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_switch.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoWiiUPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_wiiu.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoGameboyPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_gameboy.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoDsPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_ds.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaystation3PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation3.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Apple2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/apple_2.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="MacintoshPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/macintosh.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaystation4PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation4.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaystation5PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_playstation5.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SonyPlaystationVitaPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sony_vita.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="XboxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="3DOPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/3do.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AdobeFlashPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/adobe_flash.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AmstradCPCPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/amstrad_cpc.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Atari2600PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_2600.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Atari5200PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_5200.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Atari7800PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_7800.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AtariJaguarPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_jaguar.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AtariLynxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/atari_lynx.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="BandaiWonderSwanPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/bandai_wonderswan.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="BandaiWonderSwanColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/bandai_wonderswan_color.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="ColecoVisionPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/coleco_vision.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Commodore64PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/commodore_64.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="MattelIntellivisionPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/mattel_intellivision.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NECPCFXPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_pcfx.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NECSuperGrafxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_supergrafx.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NECTurboGrafx16PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_turbografx_16.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NECTurboGrafxCDPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nec_turbografx_cd.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoFamicomDiskPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_famicom_disk.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoVirtualBoyPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/nintendo_virtualboy.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="PCDOSPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/pc_dos.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="Sega32xPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_32x.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaDreamcastPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_dreamcast.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaGameGearPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_gamegear.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaMasterSystemPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_mastersystem.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaSaturnPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sega_saturn.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SinclairZXSpectrumPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/sinclair_zxspectrum.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SNKNeoGeoPocketPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/snk_neogeopocket.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SNKNeoGeoPocketColorPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/snk_neogeopocket_color.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="VectrexPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/vectrex.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="XboxSeriesPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/xbox_series.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="PcWindowsPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformSpecId/pc_windows.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    
+    <!--Platform Name Banners-->
+    <BitmapImage x:Key="MicrosoftMsxPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="MicrosoftMsx2PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/MicrosoftMSX2.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AndroidPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Android.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="ArcadePlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Arcade.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="IOSPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/iOS.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NECPC9801PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/NECPC9801.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="PhilipsCDiPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/PhilipsCDi.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="PICO8PlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/PICO8.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SegaNAOMIPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/SegaNAOMI.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="WebPlatformBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PlatformName/Web.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+
+    <!--PluginId Banners-->
+    <BitmapImage x:Key="PlayniteLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000000-0000-0000-0000-000000000000.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="AmazonGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/402674cd-4af6-4886-b6ec-0e695bfa0688.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="BattleNetLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e3c26a3d-d695-4cb7-a769-5ff7612c7edd.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="BethesdaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/0e2e793e-e0dd-4447-835c-c44a1fd506ec.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="EpicLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000002-dbd1-46c6-b5d0-b1ba559d10e4.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="GogLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/aebe8b7c-6dc3-4a66-af31-e7375c6b5e9e.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="ItchioLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/00000001-ebb2-4eec-abcb-7c89937a42bb.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="OriginLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/85dd7072-2f20-4e76-a007-41035e390724.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="SteamLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/cb91dfc9-b977-43bf-8e70-55f46e410fab.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="UplayLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/c2f038e5-8b92-4877-91f1-da9094155fc5.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="HumbleLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/96e8c4bc-ec5c-4c8b-87e7-18ee5a690626.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="XboxLibraryBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/7e4fbb5e-2ae3-48d4-8ba0-6b30e7a4e287.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="PSNLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e4ac81cb-1b1a-4ec9-8639-9a9633989a71.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="RockstarLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/88409022-088a-4de8-805a-fdbac291f00a.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="JastUsaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/d407a620-5953-4ca4-a25c-8194c8559381.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NvidiaGeForceNowLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/5f2dfd12-5f13-46fe-bcdd-64eb53ace26a.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="XCloudLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/5befaf7a-a0af-4ce2-992c-bc048d94e71b.jpg'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="IndieGalaLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/f7da6eb0-17d7-497c-92fd-347050914954.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="ImporterForAnilistBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/2366fb38-bf25-45ea-9a78-dcc797ee83c3.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="RiotBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/317a5e2e-eac1-48bc-adb3-fb9e321afd3f.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="NintendoLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/e4ac81cb-1b1a-4ec9-8639-9a9633989a72.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="OculusLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/77346dd6-b0cc-4f7d-80f0-c1d138ccae58.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="LegacyGamesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/34c3178f-6e1d-4e27-8885-99d4f031b168.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="GroupeesLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/PluginId/42ff71aa-34dc-4b12-86b6-1328136c958f.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+    <BitmapImage x:Key="UnknownLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/UnknownLibrary.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
+
+    <sys:String x:Key="NoneString" popt:Freeze="True">None</sys:String>
+</ResourceDictionary>
