@@ -85,7 +85,7 @@
                                                 <TextBlock ToolTip="{DynamicResource LOCLastPlayed}"
 												    Text="{Binding Path=LastActivity, Converter={StaticResource DateTimeToLastPlayedConverter}}"
 												    TextBlock.Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center" 
-												    FontSize="11" Margin="0,0,10,0"/>
+												    FontSize="11" Margin="5,0,10,0"/>
                                                 <TextBlock Text="{Binding Playtime, Converter={StaticResource PlayTimeToStringConverter}}"
 												    ToolTip="{DynamicResource LOCTimePlayed}" VerticalAlignment="Center" 
 												    TextBlock.Foreground="{DynamicResource TextBrush}" FontSize="11" />
