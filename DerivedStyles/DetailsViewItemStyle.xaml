@@ -11,8 +11,8 @@
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
                         <Border x:Name="SelectedRectangle" IsHitTestVisible="False" Visibility="Collapsed"
-                                BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}"/>
-                        <Border x:Name="ItemBackground" Padding="{TemplateBinding Padding}" Background="Transparent">
+                                BorderThickness="4,0,0,0" BorderBrush="{DynamicResource GlyphBrush}" CornerRadius="8"/>
+                        <Border x:Name="ItemBackground" Padding="{TemplateBinding Padding}" Background="Transparent" CornerRadius="8">
                             <ContentPresenter />
                         </Border>
                     </Grid>

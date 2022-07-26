@@ -25,7 +25,15 @@
                                 </Style>
                             </Border.Style>
                             <Grid Margin="{DynamicResource PanelTopPanelSeparator}" Width="{Settings DetailsListWitdh}" Background="{DynamicResource DetailsViewGameListBackground}">
-                                <ExtendedListBox x:Name="PART_ListGames"
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="{DynamicResource LOCAllGames}"
+                                       FontWeight="Bold" FontSize="{DynamicResource FontSizeLarge}"
+                                       Foreground="{DynamicResource TextBrushDarker}"
+                                       Margin="7,-7,0,10" Style="{StaticResource BaseTextBlockStyle}"/>
+                                <ExtendedListBox Grid.Row="1" x:Name="PART_ListGames"
                                          BorderBrush="Transparent"
                                          ItemContainerStyle="{DynamicResource DetailsViewItemStyle}"
                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"

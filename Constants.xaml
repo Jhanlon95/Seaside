@@ -1,4 +1,4 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib"
                     xmlns:popt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
@@ -26,7 +26,7 @@
     <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
     <!--region end-->
 
-    <sys:Double x:Key="PanelTopPanelSeparatorHeight">65</sys:Double>
+    <sys:Double x:Key="PanelTopPanelSeparatorHeight">25</sys:Double>
     <Thickness x:Key="PanelTopPanelSeparator"
                Left="0"
                Top="{StaticResource PanelTopPanelSeparatorHeight}"
@@ -109,6 +109,9 @@
     <Color x:Key="TopPanelItemHoverBackgroundColor">#d9000000</Color>
     <Color x:Key="TopPanelSearchBoxBackgroundColor">#d9000000</Color>
     <Color x:Key="TopPanelFilterToggleBackgroundColor">#d9000000</Color>
+    <Color x:Key="TopPanelNotificationsToggle">#d9000000</Color>
+
+    
 
     <SolidColorBrush x:Key="TopPanelItemBackgroundBrush" Color="{DynamicResource TopPanelItemBackgroundColor}" />
     <SolidColorBrush x:Key="TopPanelItemHoverBackgroundBrush" Color="{DynamicResource TopPanelItemHoverBackgroundColor}" />
@@ -246,7 +249,12 @@
         <GradientStop Color="#f0a300" Offset="0.95" />
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#00d492" />
+    <LinearGradientBrush x:Key="FavouriteIconBackgroundBrush" StartPoint="0.5,1.0" EndPoint="0.5,0.0">
+        <GradientStop Color="#FFFFC64D" Offset="0.4" />
+        <GradientStop Color="#FFF2B102" Offset="0.95" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#FF00AA75" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
 
     <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="{DynamicResource GlyphColor}" />
@@ -254,13 +262,13 @@
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
     
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="{DynamicResource TextColorDarker}" Offset="0.4" />
-        <GradientStop Color="#00cb16db" Offset="0.95" />
+        <GradientStop Color="#FF195A99" Offset="0.3" />
+        <GradientStop Color="Transparent" Offset="0.95" />
     </LinearGradientBrush>
-    
+
     <LinearGradientBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="{DynamicResource TextColorDarker}" Offset="0.4" />
-        <GradientStop Color="#00cb16db" Offset="0.95" />
+        <GradientStop Color="#2C3A67" Offset="0.7" />
+        <GradientStop Color="Transparent" Offset="0.95" />
     </LinearGradientBrush>
 
     <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
@@ -378,4 +386,35 @@
     <BitmapImage x:Key="UnknownLibraryBannerBitmap" UriSource="{ThemeFile 'Images/Banners/UnknownLibrary.png'}" popt:Freeze="True" CacheOption="OnLoad" DecodePixelWidth="{StaticResource BannersBitmapDecodeWidth}" DecodePixelHeight="{StaticResource BannersBitmapDecodeHeight}" />
 
     <sys:String x:Key="NoneString" popt:Freeze="True">None</sys:String>
+
+
+    <!-- Compleation Status Icons-->
+    <sys:String x:Key="CustomStatusIcon"></sys:String>
+    <sys:String x:Key="NoneStatusIcon"></sys:String>
+    <sys:String x:Key="NotPlayedStatusIcon"></sys:String>
+    <sys:String x:Key="PlayingStatusIcon"></sys:String>
+    <sys:String x:Key="PlayedStatusIcon"></sys:String>
+    <sys:String x:Key="CompletedStatusIcon"></sys:String>
+    <sys:String x:Key="BeatenStatusIcon"></sys:String>
+    <sys:String x:Key="AbandonedStatusIcon"></sys:String>
+    <sys:String x:Key="OnHoldStatusIcon"></sys:String>
+    <sys:String x:Key="PlanToPlayStatusIcon"></sys:String>
+
+    <!-- Compleation Status Brushes-->
+    <SolidColorBrush x:Key="NoneStatusBrush" Color="#404040" />
+    <SolidColorBrush x:Key="NotPlayedStatusBrush" Color="#808080" />
+    <SolidColorBrush x:Key="PlayingStatusBrush" Color="#6CC417" />
+    <SolidColorBrush x:Key="PlayedStatusBrush" Color="#307D7E" />
+    <SolidColorBrush x:Key="CompletedStatusBrush" Color="#FFD700" />
+    <SolidColorBrush x:Key="BeatenStatusBrush" Color="#00ff60" />
+    <SolidColorBrush x:Key="AbandonedStatusBrush" Color="#808080" />
+    <SolidColorBrush x:Key="OnHoldStatusBrush" Color="#C0C0C0" />
+    <SolidColorBrush x:Key="PlanToPlayStatusBrush" Color="#00BFFF" />
+
+    <!-- User Score Brushes-->
+    <SolidColorBrush x:Key="ThirtyBelow" Color="#ff4545" />
+    <SolidColorBrush x:Key="FiftyBelow" Color="#ffe234" />
+    <SolidColorBrush x:Key="SixtyBelow" Color="#ffe234" />
+    <SolidColorBrush x:Key="SeventyBelow" Color="#b7dd29" />
+    <SolidColorBrush x:Key="EightyBelow" Color="#57e32c" />
 </ResourceDictionary>
