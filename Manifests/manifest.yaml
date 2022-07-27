@@ -4,6 +4,8 @@ Packages:
     RequiredApiVersion: 2.1.0
     ReleaseDate: 2022-07-27
     PackageUrl: https://github.com/Jhanlon95/Seaside/releases/download/v1.1/Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c_1_1.pthm
+    Changelog:
+      - Made hovering and selecting a game in detail view nicer
   - Version: 1.0
     RequiredApiVersion: 2.1.0
     ReleaseDate: 2022-07-27
