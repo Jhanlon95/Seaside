@@ -262,13 +262,16 @@
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
     
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="#FF195A99" Offset="0.3" />
-        <GradientStop Color="Transparent" Offset="0.95" />
+        <GradientStop Color="#195A99" Offset="0.3" />
+        <GradientStop Color="#2074c5" Offset="0.5" />
+        <GradientStop Color="#002481db" Offset="0.8" />
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="DetailsViewLibrarySelectedBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="#2C3A67" Offset="0.7" />
-        <GradientStop Color="Transparent" Offset="0.95" />
+        <GradientStop Color="#2C3A67" Offset="0.3" />
+        <GradientStop Color="#344479" Offset="0.5" /> 
+        <GradientStop Color="#3b4e8b" Offset="0.8" />
+        <GradientStop Color="#003b4e8b" Offset="0.9" />
     </LinearGradientBrush>
 
     <!-- Noise Brush obtained from https://github.com/felixkmh/StartPage-for-Playnite/-->
