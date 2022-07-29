@@ -260,9 +260,9 @@
     <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="GridViewCoverSubtitleBrush" Color="#b7b7b7" />
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
-    
+
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
-        <GradientStop Color="#195A99" Offset="0.3" />
+        <GradientStop Color="#195A99" Offset="0.0" />
         <GradientStop Color="#2074c5" Offset="0.5" />
         <GradientStop Color="#002481db" Offset="0.8" />
     </LinearGradientBrush>
