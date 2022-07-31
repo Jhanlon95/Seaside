@@ -94,135 +94,378 @@
                                             <DockPanel DockPanel.Dock="Right" Grid.Column="1" ToolTip="{DynamicResource LOCUserScore}" VerticalAlignment="Center" HorizontalAlignment="Right">
                                                 <DockPanel Visibility="{Binding UserScore, Converter={StaticResource NullToVisibilityConverter}}" >
                                                     <Label Content="&#xF000;" FontSize="13" VerticalAlignment="Top" FontFamily="{StaticResource FontIcoFont}" Margin="3,0,0,0"/>
-                                                <TextBlock Text="{Binding UserScore}" FontSize="11" FontFamily="{StaticResource FontIcoFont}">
-                                                    <TextBlock.Style>
-                                                        <Style TargetType="TextBlock">
-                                                            <Setter Property="Foreground" Value="{DynamicResource LessEighty}" />
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="5">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="10">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="15">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="20">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="25">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="30">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="35">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="40">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="45">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="50">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="55">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="60">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="65">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="70">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="75">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="80">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="85">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="90">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="95">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding UserScore}" Value="100">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </TextBlock.Style>
-                                                </TextBlock>
+                                                    <TextBlock Text="{Binding UserScore}" FontSize="11" FontFamily="{StaticResource FontIcoFont}">
+                                                        <TextBlock.Style>
+                                                            <Style TargetType="TextBlock">
+                                                                <Setter Property="Foreground" Value="{DynamicResource LessEighty}" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="0">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="1">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="2">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="3">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="4">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="5">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="6">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="7">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="8">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="9">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="10">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="11">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="12">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="13">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="14">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="15">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="16">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="17">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="18">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="19">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="20">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="21">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="22">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="23">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="24">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="25">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="26">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="27">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="28">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="29">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="30">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource ThirtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="31">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="32">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="33">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="34">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="35">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="36">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="37">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="38">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="39">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="40">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="41">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="42">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="43">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="44">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="45">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="46">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="47">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="48">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="49">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="50">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="51">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="52">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="53">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="54">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource FiftyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="55">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="56">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="57">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="58">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="59">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="60">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="61">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="62">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="63">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="64">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="65">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="66">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="67">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="68">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="69">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SixtyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="70">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="71">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="72">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="73">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="74">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource SeventyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="75">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="76">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="77">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="78">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="79">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="80">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="81">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="82">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="83">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="84">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="85">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="86">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="87">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="88">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="89">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="90">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="91">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="92">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="93">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="94">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="95">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="96">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="97">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="98">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="99">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding UserScore}" Value="100">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource EightyBelow}"/>
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBlock.Style>
+                                                    </TextBlock>
                                                     <TextBlock Text="/100" FontSize="11" FontFamily="{StaticResource FontIcoFont}" HorizontalAlignment="Center"/>
                                                 </DockPanel>
                                                 <DockPanel>
 
                                                     <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="20,0,0,0">
-                                                    <TextBlock.Style>
-                                                        <Style TargetType="TextBlock">
-                                                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
-                                                            <Setter Property="Text" Value="{DynamicResource CustomStatusIcon}" />
-                                                            <Setter Property="ToolTip" Value="{Binding CompletionStatus.Name}" />
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource NoneStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource NoneStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCNone}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Not Played">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource NotPlayedStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource NotPlayedStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusNotPlayed}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Playing">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource PlayingStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource PlayingStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlaying}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Played">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource PlayedStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource PlayedStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlayed}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Completed">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource CompletedStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource CompletedStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusCompleted}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Beaten">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource BeatenStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource BeatenStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusBeaten}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Abandoned">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource AbandonedStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource AbandonedStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusAbandoned}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="On Hold">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource OnHoldStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource OnHoldStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusOnHold}" />
-                                                                </DataTrigger>
-                                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Plan to Play">
-                                                                    <Setter Property="Foreground" Value="{DynamicResource PlanToPlayStatusBrush}" />
-                                                                    <Setter Property="Text" Value="{DynamicResource PlanToPlayStatusIcon}" />
-                                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlanToPlay}" />
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </TextBlock.Style>
-                                                </TextBlock>
+                                                        <TextBlock.Style>
+                                                            <Style TargetType="TextBlock">
+                                                                <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                                                <Setter Property="Text" Value="{DynamicResource CustomStatusIcon}" />
+                                                                <Setter Property="ToolTip" Value="{Binding CompletionStatus.Name}" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource NoneStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource NoneStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCNone}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Not Played">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource NotPlayedStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource NotPlayedStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusNotPlayed}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Playing">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource PlayingStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource PlayingStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlaying}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Played">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource PlayedStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource PlayedStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlayed}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Completed">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource CompletedStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource CompletedStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusCompleted}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Beaten">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource BeatenStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource BeatenStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusBeaten}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Abandoned">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource AbandonedStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource AbandonedStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusAbandoned}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="On Hold">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource OnHoldStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource OnHoldStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusOnHold}" />
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Plan to Play">
+                                                                        <Setter Property="Foreground" Value="{DynamicResource PlanToPlayStatusBrush}" />
+                                                                        <Setter Property="Text" Value="{DynamicResource PlanToPlayStatusIcon}" />
+                                                                        <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlanToPlay}" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBlock.Style>
+                                                    </TextBlock>
                                                 </DockPanel>
                                             </DockPanel>
 
