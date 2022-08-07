@@ -180,7 +180,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TopPanel}">
-                    <StackPanel Background="{DynamicResource TopPanelFadeBackgroundBrush}">
+                    <StackPanel Background="{DynamicResource TopPanelFadeBackgroundBrush}" >
                         <Border Height="70" Padding="0,6,0,1" BorderBrush="{DynamicResource PanelSeparatorBrush}"
                             d:DesignWidth="1280"
                             d:DataContext="{x:Static DesignMainViewModel.DesignIntance}">
@@ -190,13 +190,14 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <DockPanel Grid.Column="1" HorizontalAlignment="Stretch" Margin="15,3,0,3">
+                                <DockPanel Grid.Column="0" Height="1" VerticalAlignment="Top" />
+                                <DockPanel Grid.Column="1" HorizontalAlignment="Left" Margin="15,3,0,3">
                                     <SearchBox x:Name="PART_TextMainSearch"
                                                Margin="5,6,0,6" DockPanel.Dock="Left"
                                                FontWeight="SemiBold"
                                                WindowChrome.IsHitTestVisibleInChrome="True"
                                                Style="{DynamicResource SearchBoxTopPanel}"
-                                               Width="300" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
+                                               Width="200" Background="{DynamicResource TopPanelSearchBoxBackgroundBrush}"/>
 
                                     <CheckBox x:Name="PART_ToggleFilter" ToolTip="{DynamicResource LOCFilters}"
                                               Style="{DynamicResource TopPanelFilterToggle}"
@@ -222,7 +223,9 @@
                                         <Image Source="{ThemeFile 'Images/applogo.png'}"
                                                RenderOptions.BitmapScalingMode="Fant"/>
                                     </Border>
+                                </DockPanel>
 
+                                <DockPanel Grid.Column="2" HorizontalAlignment="Right" Margin="0,5,60,0">
                                     <Button Name="PART_ButtonProgressCancel" DockPanel.Dock="Right"
                                                 Content="{DynamicResource LOCCancelLabel}"
                                                 WindowChrome.IsHitTestVisibleInChrome="True"
