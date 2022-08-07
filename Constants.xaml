@@ -19,9 +19,9 @@
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
-    <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewCoverDisplayLibraryBanner">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewCoverUseRoundedCorners">True</sys:Boolean>
-    <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">False</sys:Boolean>
+    <sys:Boolean x:Key="GridViewEnablePlayingGlowBorder">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewPlaceDescriptionAtBottom">False</sys:Boolean>
     <sys:Double x:Key="GridViewCoverLibraryBannerOpacity">1.0</sys:Double>
     <!--region end-->
@@ -257,9 +257,28 @@
     <SolidColorBrush x:Key="LibraryDetailsViewIsRunningForegroundBrush" Color="#FF00AA75" />
     <SolidColorBrush x:Key="LibraryDetailsViewIsLaunchingForegroundBrush" Color="#f0a300" />
 
-    <SolidColorBrush x:Key="GridViewCoverSelectionBrush" Color="{DynamicResource GlyphColor}" />
     <SolidColorBrush x:Key="GridViewCoverSubtitleBrush" Color="#b7b7b7" />
     <SolidColorBrush x:Key="GridViewSeparatorBrush" Color="#4Dc2c2c2" />
+
+
+    <LinearGradientBrush x:Key="GridViewLibraryGameTitleBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#195A99" Offset="1.0" />
+        <GradientStop Color="#2074c5" Offset="0.5" />
+        <GradientStop Color="#2481db" Offset="0.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GridViewLibraryHoverBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#195A99" Offset="1.0" />
+        <GradientStop Color="#2074c5" Offset="0.5" />
+        <GradientStop Color="#002481db" Offset="0.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GridViewLibrarySelectedBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#2C3A67" Offset="1.0" />
+        <GradientStop Color="#344479" Offset="0.8" />
+        <GradientStop Color="#3b4e8b" Offset="0.5" />
+        <GradientStop Color="#003b4e8b" Offset="0.0" />
+    </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="DetailsViewLibraryHoverBackgroundBrush" StartPoint="0.0,0.5" EndPoint="1.0,0.5">
         <GradientStop Color="#195A99" Offset="0.0" />

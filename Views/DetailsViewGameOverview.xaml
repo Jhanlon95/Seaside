@@ -12,11 +12,11 @@
                     <ScrollViewer HorizontalScrollBarVisibility="Disabled"
                                   VerticalScrollBarVisibility="Auto"
                                   Style="{DynamicResource DetailsScrollViewer}"
-                                  d:DesignWidth="1280"
-                                  d:DesignHeight="1550"
+                                  d:DesignWidth="980"
+                                  d:DesignHeight="1280"
                                   d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameDetailsIntance}"
                                   x:Name="PART_ScrollViewHost">
-                        <Grid Margin="0,0,0,20">
+                        <Grid Margin="0,0,0,0">
                             <!-- Background Image -->
                             <WrapPanel>
                                 <WrapPanel.Style>
@@ -183,7 +183,7 @@
                                     </Grid>
                                     <!--#regionend-->
                                 </Grid>
-                                <DockPanel Margin="0,20,0,15" Grid.Row="2" Background="Transparent">
+                                <DockPanel Margin="0,0,0,15" Grid.Row="2" Background="Transparent">
                                     <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Left">
                                         <DockPanel>
                                             <Image Name="PART_ImageIcon" MaxHeight="48" MaxWidth="48" DockPanel.Dock="Left" 

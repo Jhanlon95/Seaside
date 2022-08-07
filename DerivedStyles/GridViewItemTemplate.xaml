@@ -11,7 +11,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GameListItem}">
                     <Border BorderThickness="{Settings GridItemMargin}" BorderBrush="{DynamicResource ButtonBackgroundBrush}"
-                            CornerRadius="{DynamicResource GridViewCoverCornerRadius}" >
+                            CornerRadius="{DynamicResource GridViewCoverCornerRadius}">
                         <StackPanel Name="PART_PanelHost"
                                     d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                             <Grid Width="{Settings GridItemWidth}">
@@ -33,6 +33,7 @@
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
+                                
                                 <Border Grid.RowSpan="2" Name="Mask" Background="{DynamicResource GridViewItemMaskBackgroundBrush}"
                                         Tag="{DynamicResource GridViewCoverUseRoundedCorners}"
                                         Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Tag, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
@@ -477,6 +478,31 @@
                                     </Image.Style>
                                 </Image>
 
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Name="PART_SsViewItem"
+											    Tag="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationViewItem}" DockPanel.Dock="Right">
+                                    <StackPanel.Style>
+                                        <Style TargetType="{x:Type StackPanel}">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </StackPanel.Style>
+
+                                    <TextBlock Text="&#xEDD7;" FontFamily="{DynamicResource FontIcoFont}"
+											       Visibility="{Binding ElementName=SuccessStory_PluginViewItem, Path=Content.Visibility}"
+											       VerticalAlignment="Center" Foreground="White" Margin="4,0,0,0" FontSize="11" ToolTip="Achievements Earned"/>
+
+                                    <ContentControl x:Name="SuccessStory_PluginViewItem" Foreground="white" VerticalAlignment="Center" Margin="4,0,8,0" FontSize="12" ToolTip="Achievements Earned">
+                                        <ContentControl.Effect>
+                                            <DropShadowEffect ShadowDepth="3" RenderingBias="Quality" Color="{DynamicResource BlackColor}" />
+                                        </ContentControl.Effect>
+                                    </ContentControl>
+
+                                </StackPanel>
+
                                 <Image Name="PART_ImageCover" Grid.Row="1" Height="{Settings GridItemHeight}"
                                        RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                        HorizontalAlignment="Center" VerticalAlignment="Top"
@@ -503,28 +529,7 @@
                                 <Grid Grid.Row="1" Height="{Settings GridItemHeight}">
                                     <Border Background="{DynamicResource CoversButtonsBrush}" x:Name="BorderDarkFade" Visibility="Collapsed" />
                                     <DockPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
-                                        <TextBlock Text="&#xF000;" Foreground="{DynamicResource DetailsIconsBackgroundBrush}"
-                                                   Opacity="0.75" FontSize="16"
-                                                   Margin="3,0,0,0"
-                                                   VerticalAlignment="Center"
-                                                   DockPanel.Dock="Right"
-                                                   FontFamily="{DynamicResource FontIcoFont}"
-                                                   Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
-                                            <TextBlock.Style>
-                                                <Style TargetType="TextBlock" >
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <MultiDataTrigger>
-                                                            <MultiDataTrigger.Conditions>
-                                                                <Condition Binding="{Binding Favorite}" Value="True" />
-                                                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
-                                                            </MultiDataTrigger.Conditions>
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </MultiDataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TextBlock.Style>
-                                        </TextBlock>
+
                                         <Border DockPanel.Dock="Right" CornerRadius="8" Background="{DynamicResource OpaqueGrayHighlightBrush}">
                                             <ContentControl x:Name="DuplicateHider_SourceSelector1" RenderOptions.BitmapScalingMode="Fant" Visibility="Visible" MaxHeight="25"/>
                                         </Border>
@@ -560,7 +565,11 @@
                                            VerticalAlignment="Center"
                                            Width="{Settings GridItemWidth}"
                                            Padding="2,8,2,3"
-                                           Visibility="{Settings ShowNamesUnderCovers}" />
+                                           Visibility="{Settings ShowNamesUnderCovers}" >
+                                    <TextBlock.Effect>
+                                        <DropShadowEffect ShadowDepth="2" RenderingBias="Quality" Color="{DynamicResource BlackColor}" />
+                                    </TextBlock.Effect>
+                                </TextBlock>
                             </Border>
                             <DockPanel Width="{Settings GridItemWidth}" Visibility="{DynamicResource GridViewCoverSubtitleVisibility}">
                                 <TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
@@ -575,6 +584,85 @@
                                        TextAlignment="Left" TextTrimming="CharacterEllipsis"
                                        VerticalAlignment="Center"
                                        Padding="3,4,2,2" />
+                                <TextBlock Text="&#xF000;" HorizontalAlignment="Right" Foreground="{DynamicResource FavouriteIconBackgroundBrush}"
+                                                   Opacity="1" FontSize="16"
+                                                   Margin="3,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   DockPanel.Dock="Right"
+                                                   FontFamily="{DynamicResource FontIcoFont}"
+                                                   Tag="{DynamicResource GridViewLibraryGameShowFavorite}">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock" >
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding Favorite}" Value="True" />
+                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                                <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="20,1,0,0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
+                                            <Setter Property="Text" Value="{DynamicResource CustomStatusIcon}" />
+                                            <Setter Property="ToolTip" Value="{Binding CompletionStatus.Name}" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="">
+                                                    <Setter Property="Foreground" Value="{DynamicResource NoneStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource NoneStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCNone}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Not Played">
+                                                    <Setter Property="Foreground" Value="{DynamicResource NotPlayedStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource NotPlayedStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusNotPlayed}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Playing">
+                                                    <Setter Property="Foreground" Value="{DynamicResource PlayingStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource PlayingStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlaying}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Played">
+                                                    <Setter Property="Foreground" Value="{DynamicResource PlayedStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource PlayedStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlayed}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Completed">
+                                                    <Setter Property="Foreground" Value="{DynamicResource CompletedStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource CompletedStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusCompleted}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Beaten">
+                                                    <Setter Property="Foreground" Value="{DynamicResource BeatenStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource BeatenStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusBeaten}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Abandoned">
+                                                    <Setter Property="Foreground" Value="{DynamicResource AbandonedStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource AbandonedStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusAbandoned}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="On Hold">
+                                                    <Setter Property="Foreground" Value="{DynamicResource OnHoldStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource OnHoldStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusOnHold}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding CompletionStatus.Name}" Value="Plan to Play">
+                                                    <Setter Property="Foreground" Value="{DynamicResource PlanToPlayStatusBrush}" />
+                                                    <Setter Property="Text" Value="{DynamicResource PlanToPlayStatusIcon}" />
+                                                    <Setter Property="ToolTip" Value="{DynamicResource LOCCompletionStatusPlanToPlay}" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </Border>
@@ -618,7 +706,7 @@
                         <DataTrigger Binding="{Settings ShowGridItemBackground}" Value="True">
                             <Setter Property="Padding" Value="2,5,2,5" TargetName="ShowGameName" />
                             <Setter Property="TextAlignment" Value="Center" TargetName="ShowGameName" />
-                            <Setter Property="Background" Value="{DynamicResource GridViewCoverSelectionBrush}" TargetName="ShowGameNameBorder" />
+                            <Setter Property="Background" Value="{DynamicResource GridViewLibraryGameTitleBackgroundBrush}" TargetName="ShowGameNameBorder" />
                         </DataTrigger>
                         <DataTrigger Binding="{Binding IsInstalled}" Value="False">
                             <Setter Property="Content" Value="&#xef08;" TargetName="PART_ButtonPlay" />

@@ -16,15 +16,17 @@
                                               DockPanel.Dock="{Settings GridViewDetailsPosition}" />
                         <Grid DockPanel.Dock="Left">
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
+                            <DockPanel Margin="0,0,0,10"/>
                             <ExtendedListBox x:Name="PART_ListGames" Padding="5"
                                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                              ScrollViewer.PanningMode="VerticalOnly"
                                              ItemContainerStyle="{DynamicResource GridViewItemStyle}"
                                              DockPanel.Dock="Left"
-                                             BorderThickness="0">
+                                             BorderThickness="0" Margin="0,0,0,0" Grid.Row="1">
                                 <ExtendedListBox.ItemTemplate>
                                     <DataTemplate>
                                         <GameListItem Style="{StaticResource GridViewItemTemplate}" />
@@ -48,7 +50,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="1">
+                            <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="2">
                                 <Label Content="{DynamicResource LOCZoomLabel}" Margin="10,0,10,0"/>
                                 <SliderWithPopup x:Name="PART_SliderZoom" Width="200"/>
                             </StackPanel>

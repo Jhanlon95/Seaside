@@ -136,11 +136,11 @@
                                         </Style>
                                     </Border.Style>
                                 </Border>
-
+   
                                 <LibraryDetailsView x:Name="PART_ViewDetails" Grid.ColumnSpan="1" Grid.Column="1" />
-                                <LibraryGridView x:Name="PART_ViewGrid" Grid.ColumnSpan="1" Grid.Column="1" Margin="{DynamicResource PanelTopPanelSeparator}" />
-                                <LibraryListView x:Name="PART_ViewList" Grid.ColumnSpan="1" Grid.Column="1" Margin="{DynamicResource PanelTopPanelSeparator}" />
-                                <TopPanel Grid.ColumnSpan="3" Grid.Column="0" VerticalAlignment="Top" />
+                                <LibraryGridView x:Name="PART_ViewGrid" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,80,0,0" />
+                                <LibraryListView x:Name="PART_ViewList" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,80,0,0" />
+                                <TopPanel Grid.ColumnSpan="1" Grid.Column="1" VerticalAlignment="Top" />
                             </Grid>
 
                         </DockPanel>
