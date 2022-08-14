@@ -351,7 +351,7 @@
                                             </Viewbox>
                                             <StackPanel VerticalAlignment="Center">
                                                 <StackPanel.Resources>
-                                                    <SolidColorBrush x:Key="Extras_FilledStarBrush" Color="#FFD700"/>
+                                                    <SolidColorBrush x:Key="Extras_FilledStarBrush" Color="Gold"/>
                                                     <SolidColorBrush x:Key="Extras_EmptyStarBrush" Color="White" Opacity="0.5"/>
                                                 </StackPanel.Resources>
                                                 <Label Content="{DynamicResource LOCUserScore}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
