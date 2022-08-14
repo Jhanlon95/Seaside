@@ -1,5 +1,11 @@
 AddonId: Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c
 Packages:
+  - Version: 1.6.5
+    RequiredApiVersion: 2.1.0
+    ReleaseDate: 2022-08-14
+    PackageUrl: https://github.com/Jhanlon95/Seaside/releases/download/v1.6.5/Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c_1_6_5.pthm
+    Changelog:
+      - User score wasn't properly being hidden if there was no user score
   - Version: 1.6
     RequiredApiVersion: 2.1.0
     ReleaseDate: 2022-08-14
