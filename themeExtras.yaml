@@ -1,0 +1,23 @@
+ThemeId: Seaside
+Recommendations:
+- AddonName: DuplicateHider
+  AddonId: felixkmh_DuplicateHider_Plugin
+  Features:
+  - Floating SourceSelelctor
+  - SourceSelector in DetailsList
+  - LOCReloadScriptsSuccess
+- AddonName: SuccessStory
+  AddonId: playnite-successstory-plugin
+  Features:
+  - View Achievements for your games on muliple platforms
+  - Visible graphs to see your unlock rate
+- AddonName: HowLongToBeat
+  AddonId: playnite-howlongtobeat-plugin
+  Features:
+  - View data on how long a game takes to complete
+  - Track your play time compared to others
+- AddonName: Title Normaliser
+  AddonId: TitleNormaliser_2a4b8ac6-f29c-4dc5-97dc-aa89504a0979
+  Features:
+  - Ensure your game titles are Title case
+  - Specify specific words that should always be lower or upper case
