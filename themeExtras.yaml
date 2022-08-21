@@ -5,7 +5,6 @@ Recommendations:
   Features:
   - Floating SourceSelelctor
   - SourceSelector in DetailsList
-  - LOCReloadScriptsSuccess
 - AddonName: SuccessStory
   AddonId: playnite-successstory-plugin
   Features:
