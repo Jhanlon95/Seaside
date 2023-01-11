@@ -16,6 +16,10 @@
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewDisplayAchievements">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewDisplayLastAndTimePlayed">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewDisplayUserScore">true</sys:Boolean>
+    <sys:Boolean x:Key="DetailsViewDisplayCompletionStatus">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewLibraryGameShowFavorite">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewShowHltbDataGrid">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewEnableCoverShineAnimation">False</sys:Boolean>
@@ -409,6 +413,7 @@
 
     <sys:String x:Key="NoneString" popt:Freeze="True">None</sys:String>
 
+    <sys:String x:Key="LOC_OwnedDLC">Owned DLC</sys:String>
 
     <!-- Compleation Status Icons-->
     <sys:String x:Key="CustomStatusIcon"></sys:String>

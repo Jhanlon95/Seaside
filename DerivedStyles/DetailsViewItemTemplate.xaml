@@ -30,14 +30,18 @@
                                         RenderOptions.BitmapScalingMode="Fant" />
 
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Name="PART_SsViewItem"
-											    Tag="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationViewItem}" DockPanel.Dock="Right">
+											    Tag="{DynamicResource DetailsViewDisplayAchievements}" DockPanel.Dock="Right">
                                         <StackPanel.Style>
                                             <Style TargetType="{x:Type StackPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True"/>
+                                                            <Condition Binding="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationViewItem}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
+                                                    </MultiDataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </StackPanel.Style>
@@ -79,7 +83,18 @@
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <DockPanel DockPanel.Dock="Left" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                            <DockPanel DockPanel.Dock="Left" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Tag="{DynamicResource DetailsViewDisplayLastAndTimePlayed}">
+                                                <DockPanel.Style>
+                                                    <Style TargetType="DockPanel">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DockPanel.Style>
+                                                
                                                 <Label Content="" FontFamily="{StaticResource FontIcoFont}" FontSize="12" VerticalAlignment="Center"
 												Foreground="{DynamicResource TextBrush}" Background="Transparent"/>
                                                 <TextBlock ToolTip="{DynamicResource LOCLastPlayed}"
@@ -92,7 +107,22 @@
                                             </DockPanel>
 
                                             <DockPanel DockPanel.Dock="Right" Grid.Column="1" ToolTip="{DynamicResource LOCUserScore}" VerticalAlignment="Center" HorizontalAlignment="Right">
-                                                <DockPanel Visibility="{Binding UserScore, Converter={StaticResource NullToVisibilityConverter}}" >
+                                                <DockPanel Tag="{DynamicResource DetailsViewDisplayUserScore}">
+                                                    <DockPanel.Style>
+                                                        <Style TargetType="DockPanel">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                            <Style.Triggers>
+                                                                <MultiDataTrigger>
+                                                                    <MultiDataTrigger.Conditions>
+                                                                        <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True"/>
+                                                                        <Condition Binding="{Binding UserScore, Converter={StaticResource NullToBoolConverter}}" Value="True"/>
+                                                                    </MultiDataTrigger.Conditions>
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </MultiDataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </DockPanel.Style>
+                                                    
                                                     <Label Content="&#xF000;" FontSize="13" VerticalAlignment="Top" FontFamily="{StaticResource FontIcoFont}" Margin="3,0,0,0"/>
                                                     <TextBlock Text="{Binding UserScore}" FontSize="11" FontFamily="{StaticResource FontIcoFont}">
                                                         <TextBlock.Style>
@@ -408,7 +438,18 @@
                                                     </TextBlock>
                                                     <TextBlock Text="/100" FontSize="11" FontFamily="{StaticResource FontIcoFont}" HorizontalAlignment="Center"/>
                                                 </DockPanel>
-                                                <DockPanel>
+
+                                                <DockPanel Tag="{DynamicResource DetailsViewDisplayCompletionStatus}">
+                                                    <DockPanel.Style>
+                                                        <Style TargetType="DockPanel">
+                                                            <Setter Property="Visibility" Value="Collapsed" />
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </DockPanel.Style>
 
                                                     <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="20,0,0,0">
                                                         <TextBlock.Style>
