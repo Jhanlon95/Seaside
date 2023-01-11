@@ -1,5 +1,13 @@
 AddonId: Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c
 Packages:
+  - Version: 1.6.7
+    RequiredApiVersion: 2.4.0
+    ReleaseDate: 2023-01-11
+    PackageUrl: https://github.com/Jhanlon95/Seaside/releases/download/v1.6.7/Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c_1_6_7.pthm
+    Changelog:
+      - Updating ThemeApiVersion to 2.4.0
+      - Adding CheckDLC Button functionality for Main Details View
+      - Adding ThemeModifier Constants for Achievements, Last Played & Time Played, User Score and Completion Status in the Details View game list
   - Version: 1.6.6
     RequiredApiVersion: 2.1.0
     ReleaseDate: 2022-09-03
