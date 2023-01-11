@@ -343,7 +343,17 @@
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
-                                    
+
+                                    <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemInstallSize, Mode=OneWay}" Margin="15,0,0,0">
+                                        <Viewbox Stretch="Uniform" Height="35">
+                                            <TextBlock Text="&#xef43;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
+                                        </Viewbox>
+                                        <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <Label Name="PART_ElemInstallSize" Content="{DynamicResource LOCInstallSizeLabel}" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
+                                            <TextBlock Name="PART_TextInstallSize"/>
+                                        </StackPanel>
+                                    </DockPanel>
+
                                     <DockPanel HorizontalAlignment="Right">
 
                                         <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemUserScore, Mode=OneWay}" Margin="15,0,0,0">
