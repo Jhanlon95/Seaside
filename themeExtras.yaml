@@ -20,3 +20,10 @@ Recommendations:
   Features:
   - Ensure your game titles are Title case
   - Specify specific words that should always be lower or upper case
+PersistentPaths:
+- Images/Banners
+BannersBySpecIdPath: Images/Banners/PlatformSpecId
+BannersByPlatformNamePath: Images/Banners/PlatformName
+BannersByPluginIdPath: Images/Banners/PluginId
+BannersBySourceNamePath: Images/Banners/SourceName
+DefaultBannerPath: Images/Banners/UnknownLibrary.png

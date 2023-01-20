@@ -444,7 +444,7 @@
                                         </DockPanel>
 
 
-                                        <DockPanel Margin="20,0,0,0">
+                                        <DockPanel Margin="10,0,0,0">
                                             <DockPanel.Style>
                                                 <Style TargetType="{x:Type DockPanel}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
@@ -460,9 +460,9 @@
                                                         v 238.57143 238.57143 h 40 40 V 380.03945 141.46802 h 97.14285 97.14286 v 400 400 
                                                         h -97.14286 -97.14285 v -81.42857 -81.42857 h -40 -40 v 81.42857 81.42857 H 254.9444 157.80154 Z"/>
                                             </Viewbox>
-                                            <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <StackPanel Margin="5,0,0,0" VerticalAlignment="Center">
                                                 <Label Content="HowLongToBeat" Foreground="{DynamicResource DetailsViewDetailsLabelForegroundBrush}" />
-                                                <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="0,0,0,0" VerticalAlignment="Center" Width="310" HorizontalAlignment="Left"/>
+                                                <ContentControl x:Name="HowLongToBeat_PluginProgressBar" Margin="0,0,0,0" VerticalAlignment="Center" Width="300" HorizontalAlignment="Left"/>
                                             </StackPanel>
                                         </DockPanel>
                                     </DockPanel>
