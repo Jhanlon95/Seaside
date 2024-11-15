@@ -58,37 +58,22 @@
                                     </Border.Style>
                                 </Border>
 
-                                <ContentControl x:Name="ThemeExtras_Banner"
-                                Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Name="PART_SsViewItem"
-											    Tag="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationViewItem}" DockPanel.Dock="Right">
-                                    <StackPanel.Style>
-                                        <Style TargetType="{x:Type StackPanel}">
-                                            <Setter Property="Visibility" Value="Collapsed" />
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </StackPanel.Style>
-
-                                    <TextBlock Text="&#xEDD7;" FontFamily="{DynamicResource FontIcoFont}"
-											       Visibility="{Binding ElementName=SuccessStory_PluginViewItem, Path=Content.Visibility}"
-											       VerticalAlignment="Center" Foreground="White" Margin="4,0,0,0" FontSize="11" ToolTip="Achievements Earned"/>
-
-                                    <ContentControl x:Name="SuccessStory_PluginViewItem" Foreground="white" VerticalAlignment="Center" Margin="4,0,8,0" FontSize="12" ToolTip="Achievements Earned">
-                                        <ContentControl.Effect>
-                                            <DropShadowEffect ShadowDepth="3" RenderingBias="Quality" Color="{DynamicResource BlackColor}" />
-                                        </ContentControl.Effect>
-                                        <ContentControl.CacheMode>
-                                            <BitmapCache RenderAtScale="1" SnapsToDevicePixels="True"/>
-                                        </ContentControl.CacheMode>
-                                    </ContentControl>
-
-                                </StackPanel>
+								<StackPanel Tag="{DynamicResource GridViewCoverDisplayLibraryBanner}">
+									<StackPanel.Style>
+										<Style TargetType="{x:Type StackPanel}">
+											<Setter Property="Visibility" Value="Collapsed" />
+											<Style.Triggers>
+												<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True">
+													<Setter Property="Visibility" Value="Visible"/>
+												</DataTrigger>
+											</Style.Triggers>
+										</Style>
+									</StackPanel.Style>
+									
+									<ContentControl x:Name="ThemeExtras_Banner"
+									Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}"
+									RenderOptions.BitmapScalingMode="Fant"/>
+								</StackPanel>
 
                                 <Image Name="PART_ImageCover" Grid.Row="1" Height="{Settings GridItemHeight}"
                                        RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
@@ -162,18 +147,6 @@
                                 </TextBlock>
                             </Border>
                             <DockPanel Width="{Settings GridItemWidth}" Visibility="{DynamicResource GridViewCoverSubtitleVisibility}">
-                                <TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
-                                           FontFamily="{StaticResource FontIcoFont}"
-                                           TextAlignment="Left" VerticalAlignment="Center"
-                                           Padding="2,4,2,5" Margin="0,0,0,-2"
-                                           Foreground="{DynamicResource GridViewCoverSubtitleBrush}" />
-                                <TextBlock Text="{Binding Playtime, Mode=OneWay, Converter={StaticResource PlayTimeToStringConverter}}"
-                                       Foreground="{DynamicResource GridViewCoverSubtitleBrush}"
-                                       FontSize="{DynamicResource FontSizeSmall}"
-                                       Style="{DynamicResource BaseTextBlockStyle}"                                                                   
-                                       TextAlignment="Left" TextTrimming="CharacterEllipsis"
-                                       VerticalAlignment="Center"
-                                       Padding="3,4,2,2" />
                                 <TextBlock Text="&#xF000;" HorizontalAlignment="Right" Foreground="{DynamicResource FavouriteIconBackgroundBrush}"
                                                    Opacity="1" FontSize="16"
                                                    Margin="3,0,0,0"
@@ -195,9 +168,9 @@
                                             </Style.Triggers>
                                         </Style>
                                     </TextBlock.Style>
-                                </TextBlock>
+                                </TextBlock>		
 
-                                <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="20,1,0,0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <TextBlock FontFamily="{StaticResource FontIcoFont}" Margin="2,1,0,0" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
                                             <Setter Property="Foreground" Value="{DynamicResource GlyphBrush}" />
@@ -253,6 +226,51 @@
                                         </Style>
                                     </TextBlock.Style>
                                 </TextBlock>
+								
+								<TextBlock Text="&#xEEDC;" FontSize="{DynamicResource FontSizeSmall}"
+                                           FontFamily="{StaticResource FontIcoFont}"
+                                           TextAlignment="Left" VerticalAlignment="Center"
+                                           Padding="2,4,2,5" Margin="0,0,0,-2"
+                                           Foreground="{DynamicResource GridViewCoverSubtitleBrush}" />
+                                <TextBlock Text="{Binding Playtime, Mode=OneWay, Converter={StaticResource PlayTimeToStringConverter}}"
+                                       Foreground="{DynamicResource GridViewCoverSubtitleBrush}"
+                                       FontSize="{DynamicResource FontSizeSmall}"
+                                       Style="{DynamicResource BaseTextBlockStyle}"                                                                   
+                                       TextAlignment="Left" TextTrimming="CharacterEllipsis"
+                                       VerticalAlignment="Center"
+                                       Padding="3,4,2,2" />
+								
+								<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Name="PART_SsViewItem"
+											Tag="{DynamicResource LibraryViewDisplayAchievements}" DockPanel.Dock="Right">
+                                    <StackPanel.Style>
+                                        <Style TargetType="{x:Type StackPanel}">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+												<MultiDataTrigger>
+													<MultiDataTrigger.Conditions>
+														<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True"/>
+														<Condition Binding="{PluginSettings Plugin=SuccessStory, Path=EnableIntegrationViewItem}" Value="True" />
+													</MultiDataTrigger.Conditions>
+													<Setter Property="Visibility" Value="Visible" />
+												</MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </StackPanel.Style>
+
+                                    <TextBlock Text="&#xEDD7;" FontFamily="{DynamicResource FontIcoFont}"
+											       Visibility="{Binding ElementName=SuccessStory_PluginViewItem, Path=Content.Visibility}"
+											       VerticalAlignment="Center" Foreground="White" Margin="4,0,0,0" FontSize="11" ToolTip="Achievements Earned"/>
+
+                                    <ContentControl x:Name="SuccessStory_PluginViewItem" Foreground="white" VerticalAlignment="Center" Margin="4,0,8,0" FontSize="12" ToolTip="Achievements Earned">
+                                        <ContentControl.Effect>
+                                            <DropShadowEffect ShadowDepth="3" RenderingBias="Quality" Color="{DynamicResource BlackColor}" />
+                                        </ContentControl.Effect>
+                                        <ContentControl.CacheMode>
+                                            <BitmapCache RenderAtScale="1" SnapsToDevicePixels="True"/>
+                                        </ContentControl.CacheMode>
+                                    </ContentControl>
+
+                                </StackPanel>
                             </DockPanel>
                         </StackPanel>
                     </Border>

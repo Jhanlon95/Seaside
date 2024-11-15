@@ -356,7 +356,17 @@
 
                                     <DockPanel HorizontalAlignment="Right">
 
-                                        <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemUserScore, Mode=OneWay}" Margin="15,0,0,0">
+										<DockPanel Margin="15,0,5,0">
+												<ContentControl x:Name="NewsViewer_PlayersInGameViewerControl">
+													<ContentControl.Resources>
+														<Style TargetType="Button" BasedOn="{StaticResource PlayersCountButtonStyle}">
+															<Setter Property="Foreground" Value="White"/>
+														</Style>
+													</ContentControl.Resources>
+												</ContentControl>
+                                        </DockPanel>
+											
+                                        <DockPanel Visibility="{Binding Visibility, ElementName=PART_ElemUserScore, Mode=OneWay}" Margin="5,0,0,0">
                                             <DockPanel Visibility="{PluginStatus Plugin=felixkmh_Extras_Plugin, Status=Installed}">
                                                 <Viewbox Stretch="Uniform" Height="40" Margin="0,0,5,0">
                                                     <TextBlock Text="&#xF000;" FontFamily="{StaticResource FontIcoFont}" Foreground="{DynamicResource DetailsIconsBackgroundBrush}" />
@@ -779,17 +789,7 @@
                                             </StackPanel>
                                         </TabItem>
                                         <!--region NewsViewer-->
-                                        <TabItem>
-                                            <TabItem.Style>
-                                                <Style TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=False}" Value="True">
-                                                            <Setter Property="Visibility" Value="Visible" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TabItem.Style>
+                                        <TabItem Visibility="{PluginSettings Plugin=NewsViewer, Path=ReviewsAvailable, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibilityConverter}}">
                                             <TabItem.Header>
                                                 <TextBlock Text="{DynamicResource LOC_NewsViewer_NewsViewerControl_NewsLabel}" Style="{DynamicResource DetailsViewTabHeaderStyle}" />
                                             </TabItem.Header>

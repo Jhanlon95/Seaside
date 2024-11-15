@@ -30,7 +30,7 @@
                                         RenderOptions.BitmapScalingMode="Fant" />
 
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Name="PART_SsViewItem"
-											    Tag="{DynamicResource DetailsViewDisplayAchievements}" DockPanel.Dock="Right">
+											    Tag="{DynamicResource LibraryViewDisplayAchievements}" DockPanel.Dock="Right">
                                         <StackPanel.Style>
                                             <Style TargetType="{x:Type StackPanel}">
                                                 <Setter Property="Visibility" Value="Collapsed" />

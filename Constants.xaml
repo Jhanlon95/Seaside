@@ -7,6 +7,7 @@
     <sys:Double x:Key="LibraryGameBackgroundBlendValue">1.0</sys:Double>
     <sys:Boolean x:Key="LibraryGameBackgroundBlendWithBackground">True</sys:Boolean>
     <sys:Boolean x:Key="LibraryGameBackgroundAnimateTransition">False</sys:Boolean>
+	<sys:Boolean x:Key="LibraryViewDisplayAchievements">true</sys:Boolean>
     <sys:Double x:Key="DetailsViewDetailsMaxWidth">1024</sys:Double>
     <sys:Boolean x:Key="DetailsViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
     <sys:Boolean x:Key="GridViewDisplayGameNameIfLogoVisible">True</sys:Boolean>
@@ -16,7 +17,6 @@
     <sys:Boolean x:Key="DetailsViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="GridViewAllowUseOfLogos">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewLibraryGameShowFavorite">true</sys:Boolean>
-    <sys:Boolean x:Key="DetailsViewDisplayAchievements">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayLastAndTimePlayed">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayUserScore">true</sys:Boolean>
     <sys:Boolean x:Key="DetailsViewDisplayCompletionStatus">true</sys:Boolean>
