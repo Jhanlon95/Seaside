@@ -1,5 +1,17 @@
 AddonId: Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c
 Packages:
+  - Version: 1.7.0
+    RequiredApiVersion: 2.6.0
+    ReleaseDate: 2023-01-20
+    PackageUrl: https://github.com/Jhanlon95/Seaside/releases/download/v1.6.9/Seaside_df4e11f8-2347-4a2d-b835-757aec63e15c_1_7_0.pthm
+    Changelog:
+      - [General] Updating API version
+      - [Detail, Grid] Fixing Steam News tab integration
+      - [Detail, Grid] Added Player Count from Steam News add-on
+      - [Detail, Grid] Made the achievement toggle in ThemeModifier handle both
+      - [Grid] Fixing Banner's not respecting the toggle in ThemeModifier
+      - [Grid] Moved the achievement total from within the banner to inside the subtitle
+      - [Grid] Moved the completion status icon to the left most of the subtitle
   - Version: 1.6.9
     RequiredApiVersion: 2.4.0
     ReleaseDate: 2023-01-20
